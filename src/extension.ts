@@ -4,6 +4,7 @@ import { registerLiveShareSessionProvider } from "./tree-provider";
 
 import { COMMAND_IDS, State } from "./constants";
 import { createStore, combineReducers, Action } from 'redux';
+import { observable } from 'mobx';
 import { startAction, resetAction, TICK, stopAction, COMPLETE_CURRENT_SEGMENT_ACTION, RESET_SEGMENTS_ACTION } from "./actions/actions";
 import { stateReducer } from "./reducers/stateReducer";
 import { configReducer, remainingTimeReducer, completedSegmentsReducer } from "./reducers";
@@ -68,6 +69,7 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(startCommand, stopCommand, resetCommand);
+  observable('jessica');
 }
 
 export function deactivate() {}
