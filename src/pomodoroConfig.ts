@@ -23,6 +23,7 @@ export interface IPomodoroConfig {
 
 const getLabelValue = (settingName: string, defaultLabel: string) => {
   const labelSplitChar = '||';
+  console.log('jessica rocks!');
 
   const value = getConfigValue(settingName) || defaultLabel;
     return value.split(labelSplitChar);
