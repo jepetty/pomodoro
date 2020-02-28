@@ -205,6 +205,7 @@
     "vsls": "^0.3.967"
   },
   "dependencies": {
+    "mobx": "5.7.0",
     "redux": "^4.0.1",
     "vsls-redux": "^1.0.3"
   },
